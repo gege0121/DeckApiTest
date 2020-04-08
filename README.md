@@ -13,7 +13,7 @@ For each api, I use the rest assure functionality to do the http request
 and then check the correctness of the response based on my request url and 
 parameters. 
 
-###How to run:
+##How to run:
  * command run:
  
    mvn compile test -DBaseUrl="https://deckofcardsapi.com/"
