@@ -68,7 +68,7 @@ public class DeckApiTest {
     }
 
     @Test
-    public void create_deck_test(){
+    public void createDeckTest(){
         RestAssured.basePath = "api/deck/new/";
         RequestSpecification request = RestAssured.given();
 
@@ -106,7 +106,7 @@ public class DeckApiTest {
     }
 
     @Test
-    public void shuffleACard_test(){
+    public void shuffleACardTest(){
 
         RestAssured.basePath = "api/deck/"+deckId+"/shuffle/";
         RequestSpecification request = RestAssured.given();
@@ -170,7 +170,7 @@ public class DeckApiTest {
     }
 
     @Test
-    public void listCardsInPile_test(){
+    public void listCardsInPileTest(){
 
         RestAssured.basePath = "api/deck/"+deckId+"/pile/"+pileName+"/list/";
 
@@ -200,7 +200,7 @@ public class DeckApiTest {
 
     // draw top 2 cards
     @Test
-    public void draw_cards_in_top_test(){
+    public void drawCardsInTopTest(){
 
         RestAssured.basePath = "api/deck/"+deckId+"/pile/"+pileName+"/draw/";
 
