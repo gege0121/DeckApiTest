@@ -17,7 +17,9 @@ parameters.
  * command run:
  
    mvn compile test -DBaseUrl="https://deckofcardsapi.com/"
-![](https://github.com/gege0121/DeckApiTest/blob/master/src/Image/Screen%20Shot%202020-04-17%20at%201.13.41%20PM.png =100x100)
+   
+   <img src="https://github.com/gege0121/DeckApiTest/blob/master/src/Image/Screen%20Shot%202020-04-17%20at%201.13.41%20PM.png" width = "300" height = "200" align=center />
+
  * Using IDE:
  1. Environment property configuration
 VM option for DeckApiTest class:
