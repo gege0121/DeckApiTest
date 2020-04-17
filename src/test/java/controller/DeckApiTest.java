@@ -1,9 +1,11 @@
 package controller;
 
+import com.sun.tools.corba.se.idl.constExpr.Equal;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.hamcrest.Matcher;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,7 +13,10 @@ import org.junit.Test;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-
+import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.get;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.is;
 
 public class DeckApiTest {
 
@@ -70,8 +75,9 @@ public class DeckApiTest {
     @Test
     public void createDeckTest(){
         RestAssured.basePath = "api/deck/new/";
-        RequestSpecification request = RestAssured.given();
 
+        RequestSpecification request = RestAssured.given();
+//get(),send request; param() put parameter in requestbody
         Response response = request.param("jokers_enabled",true).get();
         JsonPath re = response.jsonPath();
         Assert.assertEquals(response.getStatusCode(),200);
@@ -79,6 +85,18 @@ public class DeckApiTest {
         Assert.assertEquals(re.get("remaining"),54);
 
     }
+
+//    @Test
+//    public void createDeckTestV2(){
+//        RestAssured.basePath = "api/deck/new/";
+//
+//        given().param("jokers_enabled",true)
+//                .get()
+//                .then()
+//                .body("success", equalTo(true))
+//                .body("remaining",equalTo(54));
+//    }
+
 
     @Test
     public void drawCardTest(){
@@ -92,6 +110,16 @@ public class DeckApiTest {
         Assert.assertEquals(response.getStatusCode(),200);
         Assert.assertEquals(cards.size(),3);
     }
+
+//    @Test
+//    public void drawCardTestV2(){
+//        RestAssured.basePath = "api/deck/"+deckId+"/draw/";
+//
+//        given().param("count",3)
+//                .get()
+//                .then()
+//                .body("cards.size()", is(3));
+//    }
 
     @Test
     public void shuffleCardTest(){
@@ -124,7 +152,7 @@ public class DeckApiTest {
         String cards = "AS,2S,KS,AD,2D,KD,AC,2C,KC,AH,2H,KH";
 
         RequestSpecification request = RestAssured.given();
-
+//queryparam() not sensitive data
         Response response = request.queryParam("cards",cards).get();
         JsonPath re = response.jsonPath();
 
