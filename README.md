@@ -26,7 +26,7 @@ VM option for DeckApiTest class:
 -ea -DBaseUrl=https://deckofcardsapi.com/
 
  2. Right click init() method, choose run "DeckApiTest".
- <img src="https://github.com/gege0121/DeckApiTest/blob/master/src/Image/Screen%20Shot%202020-04-17%20at%201.11.12%20PM.png" width = "300" height = "300" align=center />
+   <img src="https://github.com/gege0121/DeckApiTest/blob/master/src/Image/Screen%20Shot%202020-04-17%20at%201.11.12%20PM.png" width = "300" height = "300" align=center />
 
 
 
