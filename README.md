@@ -18,7 +18,7 @@ parameters.
  
    mvn compile test -DBaseUrl="https://deckofcardsapi.com/"
    
-   <img src="https://github.com/gege0121/DeckApiTest/blob/master/src/Image/Screen%20Shot%202020-04-17%20at%201.13.41%20PM.png" width = "400" height = "300" align=center />
+   <img src="https://github.com/gege0121/DeckApiTest/blob/master/src/Image/Screen%20Shot%202020-04-17%20at%201.13.41%20PM.png" width = "700" height = "300" align=center />
 
  * Using IDE:
  1. Environment property configuration
